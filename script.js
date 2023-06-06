@@ -2,37 +2,30 @@
 var generateBtn = document.querySelector("#generate")
 // sign variable is now equal towhatever the user entered for password inputs
 
-//
+//give the options to which the computer has to chose from when coming to the way a user answers the prompts
 const symbols = "!@#$%^&*(){}[]=<>/,."
 const numbers = "1234567890"
 const lower = "abcdefghijklmnopqrstuvwxyz"
 const upper ="ABCDEFGHIJKLMONPQRSTUVWXYZ"
 let selectChar =""
-//
+// sign is where the answers to the prompts will be held
 let sign 
-//write password to the #password input
+//this function is what is triggered by hitting the generate button but it triggers another function with if statements
 function writePassword(){
   var password = generatePassword();
   var PasswordText =document.querySelector("#password");
   PasswordText.value = password;
 
 }
-// Dom elements
 
 
-// const randomFunc = {
-//   lower:getRandomLower,
-//   upper: getRandomUpper,
-//   number:getRandomNumber,
-//   symbol:getRandomSymbol
-// };
 
-// generator functions
+// generator functions that gets random characters
 
 function getRandomChar(){
   return selectChar[Math.floor(Math.random() * selectChar.length)];
 }
-// console.log(getRandomSymbol());
+
 
 //when you click the generate button it will call for the write password function
 generateBtn.addEventListener("click", writePassword);
@@ -90,4 +83,4 @@ return  password
 
 }
 
-// gets makes a prompt box come down if generate button is  
+
